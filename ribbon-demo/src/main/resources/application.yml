@@ -9,4 +9,9 @@ eureka:
     ip-address: 127.0.0.1
   client:
     service-url:
-      defaultZone: http://${eureka.instance.ip-address}:8000/eureka/,http://${eureka.instance.ip-address}:8001/eureka/,http://${eureka.instance.ip-address}:8001/eureka/
+      defaultZone: http://${eureka.instance.ip-address}:8000/eureka/,http://${eureka.instance.ip-address}:8001/eureka/,http://${eureka.instance.ip-address}:8002/eureka/
+ribbon:
+   ### 连接超时时间，默认：1000，单位：ms
+   ConnectTimeout: 5000
+   ### 读取超时时间，默认：1000，单位：ms
+   ReadTimeout: 5000
