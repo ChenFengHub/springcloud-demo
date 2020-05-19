@@ -11,7 +11,7 @@ eureka:
     service-url:
       defaultZone: http://${eureka.instance.ip-address}:8000/eureka/,http://${eureka.instance.ip-address}:8001/eureka/,http://${eureka.instance.ip-address}:8002/eureka/
 ribbon:
-   ### 连接超时时间，默认：1000，单位：ms
+   ### 杩炴帴瓒呮椂鏃堕棿锛岄粯璁わ細1000锛屽崟浣嶏細ms
    ConnectTimeout: 5000
-   ### 读取超时时间，默认：1000，单位：ms
+   ### 璇诲彇瓒呮椂鏃堕棿锛岄粯璁わ細1000锛屽崟浣嶏細ms
    ReadTimeout: 5000

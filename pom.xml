@@ -16,6 +16,10 @@
 
     <modules>
         <module>eureka-demo</module>
+        <module>feign-demo</module>
+        <module>hystrix-demo</module>
+        <module>ribbon-demo</module>
+        <module>apollo-demo</module>
     </modules>
 
     <properties>
