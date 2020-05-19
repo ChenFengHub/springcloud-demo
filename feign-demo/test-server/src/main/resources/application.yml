@@ -13,12 +13,12 @@ eureka:
       defaultZone: http://${eureka.instance.ip-address}:8000/eureka/,http://${eureka.instance.ip-address}:8001/eureka/,http://${eureka.instance.ip-address}:8002/eureka/
 
 ribbon:
-  ###´´½¨Á¬½Ó³¬Ê±Ê±¼ä£¬Ä¬ÈÏ£º1s£¬µ¥Î»£ºms¡£
+  ###åˆ›å»ºè¿æ¥è¶…æ—¶æ—¶é—´ï¼Œé»˜è®¤ï¼š1sï¼Œå•ä½ï¼šmsã€‚
   ConnectTimeout: 5000
-  ###´´½¨Á¬½Óºó´Ó·şÎñÆ÷¶ÁÈ¡µ½¿ÉÓÃ×ÊÔ´ËùÓÃµÄÊ±¼ä£¬Ä¬ÈÏ£º1s£¬µ¥Î»£ºms¡£
+  ###åˆ›å»ºè¿æ¥åä»æœåŠ¡å™¨è¯»å–åˆ°å¯ç”¨èµ„æºæ‰€ç”¨çš„æ—¶é—´ï¼Œé»˜è®¤ï¼š1sï¼Œå•ä½ï¼šmsã€‚
   ReadTimeout: 5000
 
-### Ä¬ÈÏÖµ£ºfalse-Î´¿ªÆô¡£feign ¿ªÆôÇëÇóÈÛ¶Ï£¬Î´¿ªÆô£¬Ö»»á±¨ Socket ³¬Ê±´íÎó£¬²»»áÖ´ĞĞ½µ¼¶·½·¨
+### é»˜è®¤å€¼ï¼šfalse-æœªå¼€å¯ã€‚feign å¼€å¯è¯·æ±‚ç†”æ–­ï¼Œæœªå¼€å¯ï¼Œåªä¼šæŠ¥ Socket è¶…æ—¶é”™è¯¯ï¼Œä¸ä¼šæ‰§è¡Œé™çº§æ–¹æ³•
 feign:
   hystrix:
-  enabled: true
+    enabled: true

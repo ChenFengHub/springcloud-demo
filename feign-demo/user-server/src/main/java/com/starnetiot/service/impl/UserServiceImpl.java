@@ -19,6 +19,4 @@ public class UserServiceImpl implements IUserService {
         return "调用 getUserInfo 接口，获得用户信息";
     }
 
-
-
 }
