@@ -8,4 +8,4 @@ app:
   id: test_1
 apollo:
   ### configserver 的地址
-  meta: http://{destination.host}:8080
+  meta: http://${configserver.host}:8080
