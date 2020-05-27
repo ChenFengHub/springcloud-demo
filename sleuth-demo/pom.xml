@@ -12,4 +12,10 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>sleuth-zuul-server</module>
+        <module>sleuth-member-server</module>
+        <module>sleuth-order-server</module>
+    </modules>
+
 </project>

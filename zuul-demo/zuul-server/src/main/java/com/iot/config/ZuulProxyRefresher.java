@@ -25,6 +25,7 @@ public class ZuulProxyRefresher implements ApplicationContextAware {
     @Autowired
     private RouteLocator routeLocator;
 
+    /** 为项目配置创建 namespace，则使用 namespace 名称。否则使用默认值：application **/
     @ApolloConfigChangeListener(value = "application")
     public void onChange(ConfigChangeEvent changeEvent) {
         boolean zuulProxyChanged = false;

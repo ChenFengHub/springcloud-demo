@@ -21,6 +21,7 @@
         <module>ribbon-demo</module>
         <module>apollo-demo</module>
         <module>zuul-demo</module>
+        <module>sleuth-demo</module>
     </modules>
 
     <properties>
