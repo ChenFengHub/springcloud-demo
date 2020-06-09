@@ -1,6 +1,8 @@
 package com.iot.service.impl;
 
+import com.iot.entity.UserSearchParam;
 import com.iot.service.IUserService;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -13,8 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserServiceImpl implements IUserService {
 
     @Override
-    public String getUserInfo() {
-        return "调用 getUserInfo 接口，获得用户信息";
+    public String getUserInfo(@RequestBody UserSearchParam param) {
+        return "调用 getUserInfo 接口，获得用户信息。昵称："
+                + param.getNickName() + "电话：" + param.getTelephone();
     }
 
 }

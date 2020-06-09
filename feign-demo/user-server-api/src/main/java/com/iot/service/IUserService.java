@@ -1,6 +1,9 @@
 package com.iot.service;
 
+import com.iot.entity.UserSearchParam;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * @program: springcloud-demo
@@ -10,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 public interface IUserService {
 
-    @GetMapping(value = "/user/get")
-    String getUserInfo();
+    @PostMapping(value = "/user/get")
+    String getUserInfo(@RequestBody UserSearchParam param);
 
 }

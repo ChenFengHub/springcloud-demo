@@ -1,5 +1,6 @@
 package com.iot.controller;
 
+import com.iot.entity.UserSearchParam;
 import com.iot.feign.UserServiceFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +20,10 @@ public class TestController {
 
     @GetMapping("/test")
     public String test() {
-        String res = userServiceFeign.getUserInfo();
+        UserSearchParam param = new UserSearchParam();
+        param.setNickName("cf");
+        param.setTelephone("10086");
+        String res = userServiceFeign.getUserInfo(param);
         return res;
     }
 }

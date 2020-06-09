@@ -1,5 +1,6 @@
 package com.iot.feign;
 
+import com.iot.entity.UserSearchParam;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,8 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserFallback implements UserServiceFeign {
     @Override
-    public String getUserInfo() {
+    public String getUserInfo(UserSearchParam param) {
         System.out.println("人员信息不存在！");
-        return null;
+        return "人员信息不存在！";
     }
 }
