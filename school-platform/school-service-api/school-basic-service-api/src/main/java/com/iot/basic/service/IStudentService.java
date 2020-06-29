@@ -1,8 +1,8 @@
-package com.iot.service;
+package com.iot.basic.service;
 
+import com.iot.basic.entity.StudentReq;
+import com.iot.basic.entity.StudentResp;
 import com.iot.common.resp.ApiResult;
-import com.iot.entity.StudentReq;
-import com.iot.entity.StudentResp;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
