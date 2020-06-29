@@ -12,4 +12,9 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>school-acs-service</module>
+        <module>school-basic-service</module>
+    </modules>
+
 </project>

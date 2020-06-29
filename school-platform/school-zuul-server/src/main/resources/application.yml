@@ -25,3 +25,16 @@ app:
 apollo:
   ### configserver 的地址
   meta: http://${configserver.host}:8080
+
+### 配置网关反向代理
+#zuul:
+#  routes:
+#    ### 定义转发规则。这个规则名称可以随意命名
+#    api-a:
+#      ### 以 /api-member/ 访问转发到会员服务
+#      path: /api-basic/**
+#      ### 服务名称。Zuul 网关默认整合了 ribbon，ribbon + serverId 实现本地负载均衡方式调用接口
+#      serviceId: school-basic-server
+#    api-b:
+#      path: /api-acs/**
+#      serviceId: school-acs-server
