@@ -1,8 +1,8 @@
-package com.iot.basic.service.impl;
+package com.iot.acs.service.impl;
 
 import com.iot.acs.entity.RecordReq;
 import com.iot.acs.entity.RecordResp;
-import com.iot.acs.feign.StudentFeign;
+import com.iot.acs.feign.StudentServiceFeign;
 import com.iot.acs.service.IRecordService;
 import com.iot.basic.entity.StudentReq;
 import com.iot.basic.entity.StudentResp;
@@ -25,7 +25,7 @@ import javax.validation.Valid;
 public class RecordServiceImpl implements IRecordService {
 
     @Autowired
-    private StudentFeign studentFeign;
+    private StudentServiceFeign studentFeign;
 
     @Override
     public ApiResult<RecordResp> generateRecord(@Valid RecordReq param) {

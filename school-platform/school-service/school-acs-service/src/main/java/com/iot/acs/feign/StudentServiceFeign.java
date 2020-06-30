@@ -10,6 +10,6 @@ package com.iot.acs.feign;
 import com.iot.basic.service.IStudentService;
 import org.springframework.cloud.openfeign.FeignClient;
 
-@FeignClient(value = "school-basic-server", fallback = StudentFallback.class)
-public interface StudentFeign extends IStudentService {
+@FeignClient(value = "school-basic-server", fallback = StudentServiceFallback.class)
+public interface StudentServiceFeign extends IStudentService {
 }

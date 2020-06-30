@@ -4,6 +4,7 @@ import com.iot.basic.entity.StudentReq;
 import com.iot.basic.entity.StudentResp;
 import com.iot.common.constants.Constants;
 import com.iot.common.resp.ApiResult;
+import org.springframework.stereotype.Component;
 
 import javax.validation.Valid;
 
@@ -13,7 +14,8 @@ import javax.validation.Valid;
  * @author: Mr.CF
  * @create: 2020-06-29 20:20:21
  */
-public class StudentFallback implements StudentFeign {
+@Component
+public class StudentServiceFallback implements StudentServiceFeign {
     @Override
     public ApiResult<StudentResp> queryStudent(@Valid StudentReq param) {
         ApiResult res = new ApiResult();

@@ -2,13 +2,13 @@ server:
   port: 8500
 spring:
   application:
-    name: zuul-server
-  ### ÅäÖÃ zipkin ·şÎñµÄµØÖ·
+    name: school-zuul-server
+  ### é…ç½® zipkin æœåŠ¡çš„åœ°å€
   zipkin:
     base-url: http://localhost:9411/
   sleuth:
     sampler:
-      ### ÅäÖÃ sleuth µÄÇëÇó³éÑù±ÈÀı£¬ÍÆËÍ¸ø Zipkin¡£·ÖÎª£º³éÑùÊÕ¼¯ºÍÃ¿¸öÇëÇó¶¼ÊÕ¼¯¡£Ä¬ÈÏ£º0.1£¬ÊÕ¼¯ 1/10 ÇëÇó×÷ÎªÑù±¾¡£1.0-ÊÕ¼¯È«²¿ÇëÇó
+      ### é…ç½® sleuth çš„è¯·æ±‚æŠ½æ ·æ¯”ä¾‹ï¼Œæ¨é€ç»™ Zipkinã€‚åˆ†ä¸ºï¼šæŠ½æ ·æ”¶é›†å’Œæ¯ä¸ªè¯·æ±‚éƒ½æ”¶é›†ã€‚é»˜è®¤ï¼š0.1ï¼Œæ”¶é›† 1/10 è¯·æ±‚ä½œä¸ºæ ·æœ¬ã€‚1.0-æ”¶é›†å…¨éƒ¨è¯·æ±‚
       probability: 1.0
 
 eureka:
@@ -20,21 +20,8 @@ eureka:
     ip-address: 127.0.0.1
 
 app:
-  ### portal ÖĞĞÂ½¨ Application µÄ AppId
+  ### portal ä¸­æ–°å»º Application çš„ AppId
   id: zuul_server_config
 apollo:
-  ### configserver µÄµØÖ·
+  ### configserver çš„åœ°å€
   meta: http://${configserver.host}:8080
-
-### ÅäÖÃÍø¹Ø·´Ïò´úÀí
-#zuul:
-#  routes:
-#    ### ¶¨Òå×ª·¢¹æÔò¡£Õâ¸ö¹æÔòÃû³Æ¿ÉÒÔËæÒâÃüÃû
-#    api-a:
-#      ### ÒÔ /api-member/ ·ÃÎÊ×ª·¢µ½»áÔ±·şÎñ
-#      path: /api-basic/**
-#      ### ·şÎñÃû³Æ¡£Zuul Íø¹ØÄ¬ÈÏÕûºÏÁË ribbon£¬ribbon + serverId ÊµÏÖ±¾µØ¸ºÔØ¾ùºâ·½Ê½µ÷ÓÃ½Ó¿Ú
-#      serviceId: school-basic-server
-#    api-b:
-#      path: /api-acs/**
-#      serviceId: school-acs-server

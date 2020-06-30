@@ -19,6 +19,13 @@ eureka:
     prefer-ip-address: true
     ip-address: 127.0.0.1
 
+ribbon:
+  ###创建连接超时时间，默认：1s，单位：ms。
+  ConnectTimeout: 5000
+  ###创建连接后从服务器读取到可用资源所用的时间，默认：1s，单位：ms。
+  ReadTimeout: 5000
+
+### 默认值：false-未开启。feign 开启请求熔断，未开启，只会报 Socket 超时错误，不会执行降级方法
 feign:
   hystrix:
     enabled: true
