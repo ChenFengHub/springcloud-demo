@@ -22,6 +22,7 @@
         <module>apollo-demo</module>
         <module>zuul-demo</module>
         <module>sleuth-demo</module>
+        <module>school-platform</module>
     </modules>
 
     <properties>
